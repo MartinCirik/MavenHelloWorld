@@ -19,3 +19,10 @@ steps:
     Contents: '**/*.war'
     TargetFolder: '$(build.artifactstagingdirectory)'
   displayName: 'Kopírovanie vygenerovaného .war súboru'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'warfile'
+    publishLocation: 'Container'
+  displayName: 'Publikovanie Artifactu do Azure Pipelines'
