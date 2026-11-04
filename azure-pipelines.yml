@@ -25,7 +25,7 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'warfile'
     publishLocation: 'Container'
-  displayName: 'Publikovanie Artifactu do Azure Pipelines'
+  displayName: 'Publikovanie Artifactu do Azure Pipelines11'
 
 - task: PublishTestResults@2
   inputs:
