@@ -26,3 +26,9 @@ steps:
     ArtifactName: 'warfile'
     publishLocation: 'Container'
   displayName: 'Publikovanie Artifactu do Azure Pipelines'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+  displayName: 'Zobrazenie výsledkov testov na webe'
