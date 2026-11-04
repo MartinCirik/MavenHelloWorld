@@ -10,13 +10,5 @@ pool:
   name: 'Default'
 
 steps:
-- task: Maven@4
-  inputs:
-    mavenPomFile: 'MavenHelloWorld-master/pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+- script: C:\apache-maven-3.10.0\bin\mvn package -f MavenHelloWorld-master/pom.xml
+  displayName: 'Spustenie Maven Build lokálne'
