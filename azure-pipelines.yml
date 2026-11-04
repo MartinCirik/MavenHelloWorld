@@ -7,8 +7,15 @@ pool:
 steps:
 - task: MavenAuthenticate@0
   inputs:
-   artifacts: true
+    artifacts: true
 
 - script: |
     mvn package -f MavenHelloWorld-master/pom.xml
   displayName: 'Automatický Maven Build v cloude'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'MavenHelloWorld-master'
+    Contents: '**/*.war'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+  displayName: 'Kopírovanie vygenerovaného .war súboru'
