@@ -10,5 +10,5 @@ pool:
   name: 'Default'
 
 steps:
-- script: C:\apache-maven-3.10.0\bin\mvn package -f MavenHelloWorld-master/pom.xml
+- script: C:\apache-maven-3.10.0\bin\mvn package
   displayName: 'Spustenie Maven Build lokálne'
