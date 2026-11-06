@@ -29,6 +29,6 @@ steps:
 
 - task: PublishTestResults@2
   inputs:
-    testResultsFormat: 'TestNG'
+    testResultsFormat: 'JUnit'
     testResultsFiles: '**/target/surefire-reports/testng-results.xml'
   displayName: 'Zobrazenie výsledkov testov na webe'
