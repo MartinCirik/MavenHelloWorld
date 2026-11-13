@@ -20,7 +20,7 @@ public class BrowserTest {
 		options.addArguments("--disable-dev-shm-usage");
 
 		WebDriver driver = new ChromeDriver(options);
-		driver.get("https://azurewebsites.net");
+		driver.get("https://martin-helloworld-app-hvg5djdafkgpcpe9.westus3-01.azurewebsites.net/webapp/");
 		String text = driver.findElement(By.cssSelector("h1")).getText();
 		System.out.println(text);
 		Assert.assertTrue(text.equalsIgnoreCase("RahulShettyAcademy.com Learning"));
